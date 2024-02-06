@@ -7,7 +7,7 @@ import com.google.gson.annotations.SerializedName
 
 
 
-data class CurrencyPriceInfo (
+data class CryptoCurrencyDetailInfo (
     @SerializedName("TYPE")
     @Expose
     private val type: String? = null,
