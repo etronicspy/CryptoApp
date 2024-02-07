@@ -29,9 +29,9 @@ class CoinViewModel(application: Application) : AndroidViewModel(application) {
             .subscribe(
                 {
                     db.coinPriceInfoDao().insertPriceList(it)
-                    Log.d("TEST_OF_LOADING_DATA", it.toString())
+                    Log.d("TEST_OF_LOADING_DATA", "Success: $it")
                 },
-                { it.message?.let { that -> Log.d("TEST_OF_LOADING_DATA", that) } },
+                { it.message?.let { that -> Log.d("TEST_OF_LOADING_DATA", "Failure: $that") } },
             )
         compositeDisposable.add(disposable)
     }
